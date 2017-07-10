@@ -1,0 +1,21 @@
+{
+	"google": {
+		"endpoints": {
+			"new_oauth_app": "https://console.developers.google.com/apis/credentials",
+			"authorization": "https://accounts.google.com/o/oauth2/v2/auth",
+			"token": "https://www.googleapis.com/oauth2/v4/token",
+			"userinfo": "https://www.googleapis.com/oauth2/v3/userinfo"
+		},
+		"authorization_type": "Bearer",
+		"token_endpoint_form": {
+			"grant_type": "authorization_code",
+			"redirect_uri": "https://openwhisk.ng.bluemix.net/api/v1/web/niklas_heidloff@de.ibm.com_dev/default/oauth-login-and-redirect"
+		},
+		"userinfo_identifier": "email",
+		"credentials": {
+			"client_id": "xxx",
+			"client_secret": "xxx"
+		},
+		"webapp_redirect": "http://localhost:4200/home"
+	}
+}

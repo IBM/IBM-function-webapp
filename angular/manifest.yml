@@ -1,0 +1,11 @@
+---
+applications:
+- host: openwhisk-angular
+  name: openwhisk-angular
+  memory: 256M
+  path: dist/
+  instances: 1
+  stack: cflinuxfs2
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+  env:
+    FORCE_HTTPS: true

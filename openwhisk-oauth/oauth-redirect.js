@@ -1,0 +1,33 @@
+//------------------------------------------------------------------------------
+// Copyright IBM Corp. 2017
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//------------------------------------------------------------------------------
+
+function main(params) {
+    //console.log(params)
+
+    const providers = params.providers;
+    var providerName = params.provider || params.providerName;
+	var provider = providers[providerName];
+
+    let newLocation = provider.webapp_redirect + "?access_token=" + params.access_token
+        + "&refresh_token=" + params.refresh_token
+        + "&expires_in=" + params.access_token_body.expires_in
+        + "&user_name=" + params.name
+
+    return {
+        headers: { location: newLocation },
+        statusCode: 302
+    }
+}

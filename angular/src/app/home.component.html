@@ -1,0 +1,15 @@
+<button type="button" (click)="onButtonLoginClicked()">Login</button>
+<button type="button" (click)="onButtonInvokeActionClicked()">Invoke protected Action</button>
+<br>
+<br>
+<div *ngIf="userName">
+    {{ userName }} is now logged in
+</div>
+<br>
+<br>
+<div *ngIf="resultOfProtectedAPI">
+    Result of the protected action:
+    <br>
+    <br>
+    {{ resultOfProtectedAPI }}
+</div>

@@ -1,0 +1,65 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"version": "1.0",
+		"title": "MyAPI"
+	},
+	"schemes": ["https"],
+	"consumes": ["application/json"],
+	"produces": ["application/json"],
+	"paths": {
+		"/action": {
+			"get": {
+				"operationId": "getAction",
+				"x-openwhisk": {
+					"namespace": "niklas_heidloff@de.ibm.com_dev",
+					"action": "protected-action",
+					"package": "default",
+					"url": "https://openwhisk.ng.bluemix.net/api/v1/web/niklas_heidloff@de.ibm.com_dev/default/protected-action.json"
+				},
+				"responses": {
+					"200": {
+						"description": "A successful invocation response"
+					}
+				}
+			}
+		}
+	},
+	"x-ibm-configuration": {
+		"assembly": {
+			"execute": [{
+				"operation-switch": {
+					"case": [{
+						"operations": ["getAction"],
+						"execute": [{
+							"invoke": {
+								"target-url": "https://openwhisk.ng.bluemix.net/api/v1/web/niklas_heidloff@de.ibm.com_dev/default/protected-action.json",
+								"verb": "keep"
+							}
+						}]
+					}],
+					"otherwise": [],
+					"title": "whisk-invoke"
+				}
+			}]
+		},
+		"cors": {
+			"enabled": true
+		}
+	},
+	"basePath": "/path",
+	"securityDefinitions": {
+		"google": {
+			"type": "oauth2",
+			"flow": "application",
+			"tokenUrl": "",
+			"x-tokenintrospect": {
+				"url": "https://www.googleapis.com/oauth2/v3/tokeninfo"
+			}
+		}
+	},
+	"security": [{
+		"$$label": "client_id, github",
+		"google": []
+	}]
+}

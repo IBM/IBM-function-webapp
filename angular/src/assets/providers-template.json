@@ -1,0 +1,8 @@
+{
+    "google": {
+        "authorizationUrl": "https://accounts.google.com/o/oauth2/v2/auth",
+        "redirectUrl": "https://openwhisk.ng.bluemix.net/api/v1/web/niklas_heidloff@de.ibm.com_dev/default/oauth-login-and-redirect",
+        "clientId": "xxx",
+        "protectedUrl": "https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/xxx"
+    }
+}
