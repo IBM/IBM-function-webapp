@@ -1,11 +1,11 @@
-openwhisk-serverless-webapp
+IB-serverless-webapp
 ================================================================================
 
-This [project](https://github.com/nheidloff/openwhisk-serverless-webapp) shows how to write Angular web applications which use OpenWhisk actions to implement backend logic. Users need to log in with their Google accounts via OAuth. After this users can access OpenWhisk actions that have been protected via OpenWhisk API management. 
+This code pattern shows how to write Angular web applications which use OpenWhisk actions to implement backend logic. Users need to log in with their Google accounts via OAuth. After this users can access IBM function actions that have been protected via IBM function API management. 
 
-Check out the [presentation](https://www.slideshare.net/secret/MFW4T2BTNJZal4) and the [screenshots](https://github.com/nheidloff/openwhisk-serverless-webapp/tree/master/screenshots) for more details.
-
-[![Serverless Web Apps](https://github.com/nheidloff/openwhisk-serverless-webapp/raw/master/screenshots/presentation.png)](https://www.slideshare.net/secret/MFW4T2BTNJZal4)
+Pre-requistite
+Have IBM cloud account.    
+[Download](https://console.bluemix.net/openwhisk/learn/cli) the IBM function CLI.
 
 
 Setup
