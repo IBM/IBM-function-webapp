@@ -75,8 +75,14 @@ The last url here is needed for the "pretectedUrl" field in step 5.
 **3. Create Google Application**
 
 * Open the [Google Developers API Console](https://console.developers.google.com/apis)
-* Define the URL of the oauth-login-and-redirect action as callback
-* Get the client id and secret
+[img1](images/Oauth)
+Create credentials pick OAuth client ID
+
+"To create an OAuth client ID, you must first set a product name on the consent screen" click "Configure content screen" button and finish the screen. 
+Coming back to the "Create client id" tab, pick the first choice `Web Application`. You will see the tab expands.
+For "Authorized JavaScript origins", enter the domain of IBM functions. For "Authorized redirect URIs", enter the "oauth-login-and-redirect" url(mind the namespace)
+Click "Create" button and you will get the client id and secret in a popup. Save that information.
+pic
 
 **4. Deploy OpenWhisk OAuth Actions again**
 
@@ -92,7 +98,7 @@ The last url here is needed for the "pretectedUrl" field in step 5.
 * Click on login to invoke the oauth dance and then on invoke action
 
 
-Credit and Next Steps
+Credits
 ================================================================================
 
 Thank you to Nick Mitchell and Lionel Villard for their work on the open source project [openwhisk-oauth](https://github.com/starpit/openwhisk-oauth), especially for the OAuth login functionality.
