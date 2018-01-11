@@ -5,7 +5,7 @@ This code pattern shows how to write Angular web applications which use OpenWhis
 
 ## Pre-requistite
 **[Register](https://console.bluemix.net/registration/) an IBM Cloud account.**        
-**[Download](https://console.bluemix.net/openwhisk/learn/cli) the IBM function CLI. **      
+**[Download](https://console.bluemix.net/openwhisk/learn/cli) the IBM function CLI.**      
 **Install Angular. Run:**       
 ` npm install -g @angular/cli`    
 ` npm install `
