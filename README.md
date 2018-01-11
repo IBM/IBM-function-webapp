@@ -71,7 +71,6 @@ The last url here is needed for the "pretectedUrl" field in step 5.
   /init.sh
   cd ..
 ```
-* Get the URL of the oauth-login-and-redirect action from the dashboard
 
 **3. Create Google Application**
 
