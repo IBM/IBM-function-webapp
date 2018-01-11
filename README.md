@@ -3,7 +3,7 @@ IB-serverless-webapp
 
 This code pattern shows how to write Angular web applications which use OpenWhisk actions to implement backend logic. Users need to log in with their Google accounts via OAuth. After this users can access IBM function actions that have been protected via IBM function API management. 
 
-Pre-requistite
+## Pre-requistite
 **[Register](https://console.bluemix.net/registration/) an IBM Cloud account.**        
 **[Download](https://console.bluemix.net/openwhisk/learn/cli) the IBM function CLI. **      
 **Install Angular. Run:**       
