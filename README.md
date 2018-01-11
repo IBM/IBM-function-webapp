@@ -64,7 +64,13 @@ The last url here is needed for the "pretectedUrl" field in step 5.
 
 **2. Deploy OpenWhisk OAuth Actions**
 
-* Run `openwhisk-oauth/init.sh`. This command will
+* Run:
+```
+  cd ..
+  cd openwhisk-oauth
+  /init.sh
+  cd ..
+```
 * Get the URL of the oauth-login-and-redirect action from the dashboard
 
 **3. Create Google Application**
