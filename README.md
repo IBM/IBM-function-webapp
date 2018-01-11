@@ -7,9 +7,10 @@ This code pattern shows how to write Angular web applications which use IBM func
 **1. [Register](https://console.bluemix.net/registration/) an IBM Cloud account.**              
 **2. [Download](https://console.bluemix.net/openwhisk/learn/cli) the IBM function CLI.**          
 **3. Install Angular. Run:**        
-  ` npm install -g @angular/cli`    
-  ` npm install `
-
+```
+  npm install -g @angular/cli   
+  npm install 
+```
 
 Steps
 ================================================================================
@@ -75,7 +76,7 @@ The last url here is needed for the "pretectedUrl" field in step 5.
 **3. Create Google Application**
 
 * Open the [Google Developers API Console](https://console.developers.google.com/apis)
-[img1](images/Oauth)
+   ![img1](screenshots/Oauth-1.png)
 Create credentials pick OAuth client ID
 
 "To create an OAuth client ID, you must first set a product name on the consent screen" click "Configure content screen" button and finish the screen. 
