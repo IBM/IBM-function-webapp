@@ -16,9 +16,43 @@ Steps
 
 **1. Create protected API**
 
-* Run `wsk bluemix login` or `wsk bluemix login --sso` if you have sso enabled. This command will make you pick a openwisk namespace. Pick one and remember it.
-* Define in openwhisk-protected/my-api-swagger.json 1. x-openwhisk.namespace, 2. x-openwhisk.url and 3. target-url
-* Run 'openwhisk-protected/init.sh'
+* Run `wsk bluemix login` or `wsk bluemix login --sso` if you have sso enabled. This command will make you pick a openwisk namespace, like this:
+```
+Select a namespace:
+1. andy.shi_dev
+2. Developer Advocacy_dev
+3. Developer Advocacy_Watson Developer Advocacy
+4. Developer Advocacy_Cloud Developer Advocacy
+namespace>1
+ok: User 'Andy.Shi@ibm.com' logged into Bluemix
+```
+Choose a namespace from the list and remember it.
+
+* Modify openwhisk-protected/my-api-swagger.json. Replace all the occurances of my namespace `andy.shi_dev` with your picked namespace. Here are the fields:
+```
+"x-openwhisk": {
+					"namespace": "andy.shi_dev",
+					...
+					"url": "https://openwhisk.ng.bluemix.net/api/v1/web/andy.shi_dev/default/protected-action.json"
+				},
+...
+
+"x-ibm-configuration": {
+		"assembly": {
+			"execute": [{
+				"operation-switch": {
+					"case": [{
+						"operations": ["getAction"],
+						"execute": [{
+							"invoke": {
+								"target-url": "https://openwhisk.ng.bluemix.net/api/v1/web/andy.shi_dev/default/protected-action.json",
+```  
+
+* Run:
+```
+cd openwhisk-protected
+/init.sh
+```
 
 
 **2. Deploy OpenWhisk OAuth Actions**
