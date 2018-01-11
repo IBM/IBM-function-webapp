@@ -7,8 +7,8 @@ This code pattern shows how to write Angular web applications which use IBM func
 **[Register](https://console.bluemix.net/registration/) an IBM Cloud account.**        
 **[Download](https://console.bluemix.net/openwhisk/learn/cli) the IBM function CLI.**      
 **Install Angular. Run:**       
-` npm install -g @angular/cli`    
-` npm install `
+  ` npm install -g @angular/cli`    
+  ` npm install `
 
 
 Steps
@@ -18,17 +18,17 @@ Steps
 
 * Run `wsk bluemix login` or `wsk bluemix login --sso` if you have sso enabled. This command will make you pick a openwisk namespace, like this:
 ```
-Select a namespace:
-1. andy.shi_dev
-2. Developer Advocacy_dev
-3. Developer Advocacy_Watson Developer Advocacy
-4. Developer Advocacy_Cloud Developer Advocacy
-namespace>1
-ok: User 'Andy.Shi@ibm.com' logged into Bluemix
+  Select a namespace:
+  1. andy.shi_dev
+  2. Developer Advocacy_dev
+  3. Developer Advocacy_Watson Developer Advocacy
+  4. Developer Advocacy_Cloud Developer Advocacy
+  namespace>1
+  ok: User 'Andy.Shi@ibm.com' logged into Bluemix
 ```
 Choose a namespace from the list and remember it.
 
-* Modify openwhisk-protected/my-api-swagger.json. Replace all the occurances of my namespace `andy.shi_dev` with your picked namespace. Here are the fields:
+* Modify openwhisk-protected/my-api-swagger.json. Replace all the occurances of the namespace with your picked namespace. Here is what it should like after the change:
 ```
 "x-openwhisk": {
 					"namespace": "andy.shi_dev",
@@ -53,11 +53,18 @@ Choose a namespace from the list and remember it.
 cd openwhisk-protected
 /init.sh
 ```
+This command will create a "protected action". You should see the result like :
+```
+ok: updated action protected-action
+ok: created API /path/action get for action /andy.shi_dev/default/protected-action
+https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/b8c64953ec67f9443f7a79710b0b1aa59f3980f7590bc03b51262b22002c650c/path/action
 
+```
+The last url here is needed for the "pretectedUrl" field in step 5.
 
 **2. Deploy OpenWhisk OAuth Actions**
 
-* Run 'openwhisk-oauth/init.sh'
+* Run `openwhisk-oauth/init.sh`. This command will
 * Get the URL of the oauth-login-and-redirect action from the dashboard
 
 **3. Create Google Application**
