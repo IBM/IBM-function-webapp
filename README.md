@@ -112,9 +112,22 @@ For "Authorized JavaScript origins", enter the domain of IBM functions. For "Aut
 **5. Configure and run the Angular App**
 
 * Open `angular/src/assets/providers-template.json`, and save as `angular/src/assets/providers.json`.
-* Define client id, protected Url, redirect URL and protectedUrl
-* From the /angular folder run 'ng serve' and open localhost:4200
-* Click on login to invoke the oauth dance and then on invoke action
+* Change redirectUrl, clientId and protectedUrl. "protectedUrl" is acquired at step 1.
+```
+  {
+    "google": {
+        "authorizationUrl": "https://accounts.google.com/o/oauth2/v2/auth",
+        "redirectUrl": "https://openwhisk.ng.bluemix.net/api/v1/web/andy.shi_dev/default/oauth-login-and-redirect",
+        "clientId": "453375156318-edqjkls99e9jiv0f1f7of2tvbe1k7k0m.apps.googleusercontent.com",
+        "protectedUrl": "https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/b8c64953ec67f9443f7a79710b0b1aa59f3980f7590bc03b51262b22002c650c/path/action"
+      }
+   }
+```
+* Go to `angular` folder and run `ng serve`. 
+* In a browser, open `localhost:4200`.
+* Click on `login` button first to invoke the oauth action. Then click the `Invoke Protected Action` to invoke the protected action.   
+![result](screenshots/web-app.png)
+
 
 
 Credits
