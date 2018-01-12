@@ -1,5 +1,7 @@
-Use IBM function to create an OAuth app with Angular
-================================================================================
+[![Build Status](https://travis-ci.org/IBM/watson-banking-chatbot.svg?branch=master)](https://travis-ci.org/IBM/watson-banking-chatbot)
+![IBM Cloud Deployments](https://metrics-tracker.mybluemix.net/stats/527357940ca5e1027fbf945add3b15c4/badge.svg)
+
+# Use IBM function to create an OAuth app with Angular
 
 This code pattern shows how to write Angular web applications which use IBM function actions to implement backend logic. Users need to log in with their Google accounts via OAuth. After this users can access IBM function actions that have been protected via IBM function API management. 
 
@@ -12,9 +14,7 @@ This code pattern shows how to write Angular web applications which use IBM func
   npm install 
 ```
 
-Steps
-================================================================================
-
+## Steps
 **1. Create protected API**
 
 * Run `wsk bluemix login` or `wsk bluemix login --sso` if you have sso enabled. This command will make you pick a openwisk namespace, like this:
@@ -75,7 +75,8 @@ The last url here is needed for the "pretectedUrl" field in step 5.
 
 **3. Create Google Application**
 
-* Open the [Google Developers API Console](https://console.developers.google.com/apis)
+* Open the [Google Developers API Console](https://console.developers.google.com/apis). From the left side bars, choose `Credentials` bar.
+
    ![img1](screenshots/Oauth1.png)
    
 * From the `Create credentials` menu bar pick OAuth client ID
@@ -128,9 +129,7 @@ For "Authorized JavaScript origins", enter the domain of IBM functions. For "Aut
 * Click on `login` button first to invoke the oauth action. Then click the `Invoke Protected Action` to invoke the protected action.   
 ![result](screenshots/web-app.png)
 
-
-
 Credits
 ================================================================================
 
-Thank you to Nick Mitchell and Lionel Villard for their work on the open source project [openwhisk-oauth](https://github.com/starpit/openwhisk-oauth), especially for the OAuth login functionality.
+This developer code pattern is created by Niklas Heidloff. Thanks to Nick Mitchell and Lionel Villard for their work on the open source project [openwhisk-oauth](https://github.com/starpit/openwhisk-oauth), especially for the OAuth login functionality.
