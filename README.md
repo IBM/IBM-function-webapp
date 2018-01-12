@@ -92,9 +92,22 @@ For "Authorized JavaScript origins", enter the domain of IBM functions. For "Aut
 
 **4. Deploy OpenWhisk OAuth Actions again**
 
-* Create a file 'openwhisk-oauth/providers.json' (based on providers-template.json)
-* Define client id, secret and redirect URL
-* Run 'openwhisk-oauth/init.sh'
+* Open `openwhisk-oauth/providers-template.json` and save it as `openwhisk-oauth/providers.json`.
+* Change redirect URL to reflect your namespace. 
+* Fill in client id, secret from previous step. You should have something like this:
+```
+"authorization_type": "Bearer",
+		"token_endpoint_form": {
+			"grant_type": "authorization_code",
+			"redirect_uri": "https://openwhisk.ng.bluemix.net/api/v1/web/andy.shi_dev/default/oauth-login-and-redirect"
+		},
+		"userinfo_identifier": "email",
+		"credentials": {
+			"client_id": "453375156318-edqjkls99e9jiv0f1f7of2tvbe1k7k0m.apps.googleusercontent.com",
+			"client_secret": "rPc_cR7UZomFtOMZ5uT6DBU1"
+		},
+```
+* Run `openwhisk-oauth/init.sh`.
 
 **5. Configure and run the Angular App**
 
