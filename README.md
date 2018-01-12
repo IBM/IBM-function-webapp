@@ -111,7 +111,7 @@ For "Authorized JavaScript origins", enter the domain of IBM functions. For "Aut
 
 **5. Configure and run the Angular App**
 
-* Create a file 'angular/src/assets/providers.json' (based on providers-template.json)
+* Open `angular/src/assets/providers-template.json`, and save as `angular/src/assets/providers.json`.
 * Define client id, protected Url, redirect URL and protectedUrl
 * From the /angular folder run 'ng serve' and open localhost:4200
 * Click on login to invoke the oauth dance and then on invoke action
