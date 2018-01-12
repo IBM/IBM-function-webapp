@@ -3,7 +3,19 @@
 
 # Use IBM function to create an OAuth app with Angular
 
-This code pattern shows how to write Angular web applications which use IBM function actions to implement backend logic. Users need to log in with their Google accounts via OAuth. After this users can access IBM function actions that have been protected via IBM function API management. 
+This code pattern shows how to write Angular web applications which use IBM cloud function actions to implement backend logic. Users need to log in with their Google accounts via OAuth. After this users can access IBM cloud function actions that have been protected via IBM cloud function API management. Through this exercise, users will get familiar with:
+** How to create IBM cloud function actions.
+** How to setup Google OAuth access.
+
+## Flow
+
+## Included Components
+* IBM cloud functions:A distributed, event-driven compute service also referred to as Serverless computing or as Function as a Service (FaaS).
+* Google API OAuth 2.0: Google APIs use the OAuth 2.0 protocol for authentication and authorization. Google supports common OAuth 2.0 scenarios such as those for web server, installed, and client-side applications.
+* AngularJS: AngularJS is a JavaScript-based open-source front-end web application framework.
+
+## Featured technologies
+* Serverless computing
 
 ## Pre-requistite
 **1. [Register](https://console.bluemix.net/registration/) an IBM Cloud account.**              
@@ -15,7 +27,12 @@ This code pattern shows how to write Angular web applications which use IBM func
 ```
 
 ## Steps
-**1. Create protected API**
+**1. Clone the repo**
+
+In a terminal, run:   
+`git clone https://github.com/IBM/IBM-function-webapp.git`
+
+**2. Create protected API**
 
 * Run `wsk bluemix login` or `wsk bluemix login --sso` if you have sso enabled. This command will make you pick a openwisk namespace, like this:
 ```
@@ -61,9 +78,9 @@ ok: created API /path/action get for action /andy.shi_dev/default/protected-acti
 https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/b8c64953ec67f9443f7a79710b0b1aa59f3980f7590bc03b51262b22002c650c/path/action
 
 ```
-The last url here is needed for the "pretectedUrl" field in step 5.
+The last url here is needed for the "pretectedUrl" field in step 6.
 
-**2. Deploy OpenWhisk OAuth Actions**
+**3. Deploy OpenWhisk OAuth Actions**
 
 * Run:
 ```
@@ -73,7 +90,7 @@ The last url here is needed for the "pretectedUrl" field in step 5.
   cd ..
 ```
 
-**3. Create Google Application**
+**4. Create Google Application**
 
 * Open the [Google Developers API Console](https://console.developers.google.com/apis). From the left side bars, choose `Credentials` bar.
 
@@ -91,7 +108,7 @@ For "Authorized JavaScript origins", enter the domain of IBM functions. For "Aut
 * Click "Create" button and you will get the client id and secret in a popup. Save that information.
 ![img4](screenshots/Oauth4.png)
 
-**4. Deploy OpenWhisk OAuth Actions again**
+**5. Deploy OpenWhisk OAuth Actions again**
 
 * Open `openwhisk-oauth/providers-template.json` and save it as `openwhisk-oauth/providers.json`.
 * Change redirect URL to reflect your namespace. 
@@ -110,10 +127,10 @@ For "Authorized JavaScript origins", enter the domain of IBM functions. For "Aut
 ```
 * Run `openwhisk-oauth/init.sh`.
 
-**5. Configure and run the Angular App**
+**6. Configure and run the Angular App**
 
 * Open `angular/src/assets/providers-template.json`, and save as `angular/src/assets/providers.json`.
-* Change redirectUrl, clientId and protectedUrl. "protectedUrl" is acquired at step 1.
+* Change redirectUrl, clientId and protectedUrl. "protectedUrl" is acquired at step 2.
 ```
   {
     "google": {
@@ -129,7 +146,10 @@ For "Authorized JavaScript origins", enter the domain of IBM functions. For "Aut
 * Click on `login` button first to invoke the oauth action. Then click the `Invoke Protected Action` to invoke the protected action.   
 ![result](screenshots/web-app.png)
 
-Credits
-================================================================================
+## Credits
 
-This developer code pattern is created by Niklas Heidloff. Thanks to Nick Mitchell and Lionel Villard for their work on the open source project [openwhisk-oauth](https://github.com/starpit/openwhisk-oauth), especially for the OAuth login functionality.
+This developer code pattern is developed by Niklas Heidloff. Thanks to Nick Mitchell and Lionel Villard for their work on the open source project [openwhisk-oauth](https://github.com/starpit/openwhisk-oauth), especially for the OAuth login functionality.
+
+## License
+
+[Apache 2.0](LICENSE)
