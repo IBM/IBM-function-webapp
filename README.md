@@ -76,14 +76,19 @@ The last url here is needed for the "pretectedUrl" field in step 5.
 **3. Create Google Application**
 
 * Open the [Google Developers API Console](https://console.developers.google.com/apis)
-   ![img1](screenshots/Oauth-1.png)
-Create credentials pick OAuth client ID
+   ![img1](screenshots/Oauth1.png)
+   
+* From the `Create credentials` menu bar pick OAuth client ID
+![img2](screenshots/Oauth2.png)
 
-"To create an OAuth client ID, you must first set a product name on the consent screen" click "Configure content screen" button and finish the screen. 
-Coming back to the "Create client id" tab, pick the first choice `Web Application`. You will see the tab expands.
-For "Authorized JavaScript origins", enter the domain of IBM functions. For "Authorized redirect URIs", enter the "oauth-login-and-redirect" url(mind the namespace)
-Click "Create" button and you will get the client id and secret in a popup. Save that information.
-pic
+* Next you will see the warning message: "To create an OAuth client ID, you must first set a product name on the consent screen". Click "Configure content screen" button and finish the screen. That is pretty straightforward.
+
+* Coming back to the "Create client id" tab, pick the first choice `Web Application`. You will see the tab expands.
+For "Authorized JavaScript origins", enter the domain of IBM functions. For "Authorized redirect URIs", enter the "oauth-login-and-redirect" url(mind the namespace).
+![img3](screenshots/Oauth3.png)
+
+* Click "Create" button and you will get the client id and secret in a popup. Save that information.
+![img4](screenshots/Oauth4.png)
 
 **4. Deploy OpenWhisk OAuth Actions again**
 
