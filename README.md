@@ -3,9 +3,9 @@
 
 # Use IBM function to create an OAuth app with Angular
 
-This code pattern shows how to write Angular web applications which use IBM cloud function actions to implement backend logic. Users need to log in with their Google accounts via OAuth. After this users can access IBM cloud function actions that have been protected via IBM cloud function API management. Through this exercise, users will get familiar with:
-** How to create IBM cloud function actions.
-** How to setup Google OAuth access.
+This code pattern shows how to write Angular web applications which use IBM cloud function actions to implement backend logic. Users need to log in with their Google accounts via OAuth. After this users can access IBM cloud function actions that have been protected via IBM cloud function API management. Through this exercise, users will get familiar with:   
+* How to create IBM cloud function actions.
+* How to setup Google OAuth access.
 
 ## Flow
 
@@ -18,9 +18,9 @@ This code pattern shows how to write Angular web applications which use IBM clou
 * Serverless computing
 
 ## Pre-requistite
-**1. [Register](https://console.bluemix.net/registration/) an IBM Cloud account.**              
-**2. [Download](https://console.bluemix.net/openwhisk/learn/cli) the IBM function CLI.**          
-**3. Install Angular. Run:**        
+* [Register](https://console.bluemix.net/registration/) an IBM Cloud account.              
+* [Download](https://console.bluemix.net/openwhisk/learn/cli) the IBM function CLI.        
+* Install Angular. Run:       
 ```
   npm install -g @angular/cli   
   npm install 
