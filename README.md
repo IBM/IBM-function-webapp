@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/IBM/watson-banking-chatbot.svg?branch=master)](https://travis-ci.org/IBM/watson-banking-chatbot)
 ![IBM Cloud Deployments](https://metrics-tracker.mybluemix.net/stats/527357940ca5e1027fbf945add3b15c4/badge.svg)
 
-# Use IBM function to create an OAuth app with Angular
+# Use IBM cloud function to create an OAuth app with Angular
 
 This code pattern shows how to write Angular web applications which use IBM cloud function actions to implement backend logic. Users need to log in with their Google accounts via OAuth. After this users can access IBM cloud function actions that have been protected via IBM cloud function API management. Through this exercise, users will get familiar with:   
 * How to create IBM cloud function actions.
