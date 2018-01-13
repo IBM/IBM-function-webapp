@@ -1,10 +1,10 @@
 [![Build Status](https://travis-ci.org/IBM/watson-banking-chatbot.svg?branch=master)](https://travis-ci.org/IBM/watson-banking-chatbot)
 ![IBM Cloud Deployments](https://metrics-tracker.mybluemix.net/stats/527357940ca5e1027fbf945add3b15c4/badge.svg)
 
-# Use IBM cloud function to create an OAuth app with Angular
+# Use IBM cloud functions to create an OAuth app with Angular
 
-This code pattern shows how to write Angular web applications which use IBM cloud function actions to implement backend logic. Users need to log in with their Google accounts via OAuth. After this users can access IBM cloud function actions that have been protected via IBM cloud function API management. Through this exercise, users will get familiar with:   
-* How to create IBM cloud function actions.
+This code pattern shows how to write Angular web applications which use IBM cloud functions actions to implement backend logic. Users need to log in with their Google accounts via OAuth. After this users can access IBM cloud functions actions that have been protected via IBM cloud functions API management. Through this exercise, users will get familiar with:   
+* How to create IBM cloud functions actions.
 * How to setup Google OAuth access.
 
 ## Flow
@@ -19,7 +19,7 @@ This code pattern shows how to write Angular web applications which use IBM clou
 
 ## Pre-requistite
 * [Register](https://console.bluemix.net/registration/) an IBM Cloud account.              
-* [Download](https://console.bluemix.net/openwhisk/learn/cli) the IBM function CLI.        
+* [Download](https://console.bluemix.net/openwhisk/learn/cli) the IBM functions CLI.        
 * Install Angular. Run:       
 ```
   npm install -g @angular/cli   
@@ -102,7 +102,7 @@ The last url here is needed for the "pretectedUrl" field in step 6.
 * Next you will see the warning message: "To create an OAuth client ID, you must first set a product name on the consent screen". Click "Configure content screen" button and finish the screen. That is pretty straightforward.
 
 * Coming back to the "Create client id" tab, pick the first choice `Web Application`. You will see the tab expands.
-For "Authorized JavaScript origins", enter the domain of IBM functions. For "Authorized redirect URIs", enter the "oauth-login-and-redirect" url(mind the namespace).
+For "Authorized JavaScript origins", enter the domain of IBM cloud functions. For "Authorized redirect URIs", enter the "oauth-login-and-redirect" url(mind the namespace).
 ![img3](screenshots/Oauth3.png)
 
 * Click "Create" button and you will get the client id and secret in a popup. Save that information.
