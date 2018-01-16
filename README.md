@@ -8,14 +8,26 @@ This code pattern shows how to write Angular web applications which use IBM clou
 * How to setup Google OAuth access.
 
 ## Flow
+![architecture](https://github.com/IBM/IBM-function-webapp/blob/master/screenshots/Untitled%20Diagram.png)
+
+1. User Login to Angular web app.
+2. The web app invokes IBM Cloud functions
+3. The IBM Cloud functions calls Google OAuth API
+4. Google OAuth API returns results to callback URL(the Angular web app)
+
+
+1. User Login to Angular web app.
+2. The web app invokes IBM Cloud functions
+3. The IBM Cloud functions calls Google OAuth API
+4. Google OAuth API returns results to callback URL(the Angular web app)
 
 ## Included Components
-* IBM cloud functions:A distributed, event-driven compute service also referred to as Serverless computing or as Function as a Service (FaaS).
+* IBM cloud functions: A distributed, event-driven compute service also referred to as Serverless computing or as Function as a Service (FaaS).
 * Google API OAuth 2.0: Google APIs use the OAuth 2.0 protocol for authentication and authorization. Google supports common OAuth 2.0 scenarios such as those for web server, installed, and client-side applications.
 * AngularJS: AngularJS is a JavaScript-based open-source front-end web application framework.
 
 ## Featured technologies
-* Serverless computing
+* Serverless: An event-action platform that allows you to execute code in response to an event.
 
 ## Pre-requistite
 * [Register](https://console.bluemix.net/registration/) an IBM Cloud account.              
@@ -148,7 +160,7 @@ For "Authorized JavaScript origins", enter the domain of IBM cloud functions. Fo
 
 ## Credits
 
-This developer code pattern is developed by Niklas Heidloff. Thanks to Nick Mitchell and Lionel Villard for their work on the open source project [openwhisk-oauth](https://github.com/starpit/openwhisk-oauth), especially for the OAuth login functionality.
+This developer code pattern is developed by **Niklas Heidloff**. Thanks to **Nick Mitchell** and **Lionel Villard** for their work on the open source project [openwhisk-oauth](https://github.com/starpit/openwhisk-oauth), especially for the OAuth login functionality.
 
 ## License
 
