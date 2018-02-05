@@ -29,7 +29,7 @@ This code pattern shows how to write Angular web applications which use IBM clou
 ## Featured technologies
 * Serverless: An event-action platform that allows you to execute code in response to an event.
 
-## Pre-requistite
+## Pre-requisite
 * [Register](https://console.bluemix.net/registration/) an IBM Cloud account.              
 * [Download](https://console.bluemix.net/openwhisk/learn/cli) the IBM functions CLI.        
 * Install Angular. Run:       
@@ -58,7 +58,7 @@ In a terminal, run:
 ```
 Choose a namespace from the list and remember it.
 
-* Modify openwhisk-protected/my-api-swagger.json. Replace all the occurances of the namespace with your picked namespace. Here is what it should like after the change:
+* Modify `openwhisk-protected/my-api-swagger.json`. Replace all the occurances of the namespace with your picked namespace. Here is what it should like after the change:
 ```
 "x-openwhisk": {
 					"namespace": "andy.shi_dev",
@@ -83,7 +83,7 @@ Choose a namespace from the list and remember it.
 cd openwhisk-protected
 /init.sh
 ```
-This command will create a "protected action". You should see the result like :
+This command will create a "protected action". You should see the result like:
 ```
 ok: updated action protected-action
 ok: created API /path/action get for action /andy.shi_dev/default/protected-action
@@ -108,7 +108,7 @@ The last url here is needed for the "pretectedUrl" field in step 6.
 
    ![img1](screenshots/Oauth1.png)
    
-* From the `Create credentials` menu bar pick OAuth client ID
+* From the `Create credentials` menu bar pick `OAuth client ID`
 ![img2](screenshots/Oauth2.png)
 
 * Next you will see the warning message: "To create an OAuth client ID, you must first set a product name on the consent screen". Click "Configure content screen" button and finish the screen. That is pretty straightforward.
