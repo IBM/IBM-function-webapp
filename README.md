@@ -24,7 +24,7 @@ This code pattern shows how to write Angular web applications which use IBM clou
 ## Included Components
 * IBM cloud functions: A distributed, event-driven compute service also referred to as Serverless computing or as Function as a Service (FaaS).
 * Google API OAuth 2.0: Google APIs use the OAuth 2.0 protocol for authentication and authorization. Google supports common OAuth 2.0 scenarios such as those for web server, installed, and client-side applications.
-* AngularJS: AngularJS is a JavaScript-based open-source front-end web application framework.
+* Angular: Angular is a JavaScript-based open-source front-end web application framework.
 
 ## Featured technologies
 * Serverless: An event-action platform that allows you to execute code in response to an event.
