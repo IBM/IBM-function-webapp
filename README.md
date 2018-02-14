@@ -22,9 +22,9 @@ This code pattern shows how to write Angular web applications which use IBM clou
 4. Google OAuth API returns results to callback URL(the Angular web app)
 
 ## Included Components
-* IBM cloud functions: A distributed, event-driven compute service also referred to as Serverless computing or as Function as a Service (FaaS).
-* Google API OAuth 2.0: Google APIs use the OAuth 2.0 protocol for authentication and authorization. Google supports common OAuth 2.0 scenarios such as those for web server, installed, and client-side applications.
-* Angular: Angular is a JavaScript-based open-source front-end web application framework.
+* [Angular](https://angular.io/): Angular is a JavaScript-based open-source front-end web application framework.
+* [IBM Cloud Functions](https://console.bluemix.net/openwhisk/): A distributed, event-driven compute service also referred to as Serverless computing or as Function as a Service (FaaS).
+* [Google OAuth 2.0](https://developers.google.com/identity/protocols/OAuth2UserAgent): Google APIs use the OAuth 2.0 protocol for authentication and authorization. Google supports common OAuth 2.0 scenarios such as those for web server, installed, and client-side applications.
 
 ## Featured technologies
 * Serverless: An event-action platform that allows you to execute code in response to an event.
