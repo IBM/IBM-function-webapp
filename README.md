@@ -8,18 +8,18 @@ This code pattern shows how to write Angular web applications which use IBM clou
 * How to setup Google OAuth access.
 
 ## Flow
-![architecture](https://github.com/IBM/IBM-function-webapp/blob/master/screenshots/Untitled%20Diagram.png)
+![architecture](https://media.github.ibm.com/user/1650/files/82134860-1c61-11e8-8f58-62763114310e)
 
-1. User Login to Angular web app.
-2. The web app invokes IBM Cloud functions
-3. The IBM Cloud functions calls Google OAuth API
-4. Google OAuth API returns results to callback URL(the Angular web app)
+1. User opens Angular via web browser and presses 'login' button.
+2. Angular app opens Google OAuth web page where users authenticate and grant application access.
+3. Google web page redirects to OpenWhisk sequence 'oauth-login-and-redirect' with a 'code' parameter in the URL.
+4. The sequence is triggered. The first OpenWhisk function 'oauth-login' reads the 'code' and invokes a Google API endpoint to exchange the 'code' against a 'token'.
+5. The same 'oauth-login' function invokes with the token another Google API endpoint to read user profile information, for example the user name.
+6. The sequence invokes the next OpenWhisk function 'redirect' which invokes the Angular app with the token and the user name in the url.
+7. When users click on 'invoke protected action' in the Angular app, a REST API to the API management is invoked. The request contains the token.
+8. API management validates the token. If valid, the OpenWhisk function 'protected-action' is invoked.
+9. The response from 'protected-action' is displayed in the Angular app.
 
-
-1. User Login to Angular web app.
-2. The web app invokes IBM Cloud functions
-3. The IBM Cloud functions calls Google OAuth API
-4. Google OAuth API returns results to callback URL(the Angular web app)
 
 ## Included Components
 * [Angular](https://angular.io/): Angular is a JavaScript-based open-source front-end web application framework.
