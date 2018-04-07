@@ -60,22 +60,28 @@ Choose a namespace from the list and remember it.
 
 * Modify `openwhisk-protected/my-api-swagger.json`. Replace all the occurances of the namespace with your picked namespace. Here is what it should like after the change:
 ```
-"x-openwhisk": {
-					"namespace": "andy.shi_dev",
-					...
-					"url": "https://openwhisk.ng.bluemix.net/api/v1/web/andy.shi_dev/default/protected-action.json"
-				},
-...
 
+"x-openwhisk": {
+	"namespace": "andy.shi_dev",
+	"url": "https://openwhisk.ng.bluemix.net/api/v1/web/andy.shi_dev/default/protected-action.json"
+},
 "x-ibm-configuration": {
-		"assembly": {
-			"execute": [{
-				"operation-switch": {
-					"case": [{
-						"operations": ["getAction"],
-						"execute": [{
-							"invoke": {
-								"target-url": "https://openwhisk.ng.bluemix.net/api/v1/web/andy.shi_dev/default/protected-action.json",
+	"assembly": {
+		"execute": [{
+			"operation-switch": {
+				"case": [{
+					"operations": ["getAction"],
+					"execute": [{
+						"invoke": {
+							"target-url": "https://openwhisk.ng.bluemix.net/api/v1/web/andy.shi_dev/default/protected-action.json"
+						}
+					}]
+				}]
+			}
+		}]
+	}
+}
+
 ```  
 
 * Run:
@@ -126,16 +132,18 @@ For "Authorized JavaScript origins", enter the domain of IBM cloud functions. Fo
 * Change redirect URL to reflect your namespace. 
 * Fill in client id, secret from previous step. You should have something like this:
 ```
-"authorization_type": "Bearer",
-		"token_endpoint_form": {
-			"grant_type": "authorization_code",
-			"redirect_uri": "https://openwhisk.ng.bluemix.net/api/v1/web/andy.shi_dev/default/oauth-login-and-redirect"
-		},
-		"userinfo_identifier": "email",
-		"credentials": {
-			"client_id": "453375156318-edqjkls99e9jiv0f1f7of2tvbe1k7k0m.apps.googleusercontent.com",
-			"client_secret": "rPc_cR7UZomFtOMZ5uT6DBU1"
-		},
+{
+	"authorization_type": "Bearer",
+	"token_endpoint_form": {
+		"grant_type": "authorization_code",
+		"redirect_uri": "https://openwhisk.ng.bluemix.net/api/v1/web/andy.shi_dev/default/oauth-login-and-redirect"
+	},
+	"userinfo_identifier": "email",
+	"credentials": {
+		"client_id": "453375156318-edqjkls99e9jiv0f1f7of2tvbe1k7k0m.apps.googleusercontent.com",
+		"client_secret": "rPc_cR7UZomFtOMZ5uT6DBU1"
+	}
+}
 ```
 * Run `openwhisk-oauth/init.sh`.
 
@@ -145,13 +153,13 @@ For "Authorized JavaScript origins", enter the domain of IBM cloud functions. Fo
 * Change redirectUrl, clientId and protectedUrl. "protectedUrl" is acquired at step 2.
 ```
   {
-    "google": {
-        "authorizationUrl": "https://accounts.google.com/o/oauth2/v2/auth",
-        "redirectUrl": "https://openwhisk.ng.bluemix.net/api/v1/web/andy.shi_dev/default/oauth-login-and-redirect",
-        "clientId": "453375156318-edqjkls99e9jiv0f1f7of2tvbe1k7k0m.apps.googleusercontent.com",
-        "protectedUrl": "https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/b8c64953ec67f9443f7a79710b0b1aa59f3980f7590bc03b51262b22002c650c/path/action"
-      }
-   }
+  	"google": {
+  		"authorizationUrl": "https://accounts.google.com/o/oauth2/v2/auth",
+  		"redirectUrl": "https://openwhisk.ng.bluemix.net/api/v1/web/andy.shi_dev/default/oauth-login-and-redirect",
+  		"clientId": "453375156318-edqjkls99e9jiv0f1f7of2tvbe1k7k0m.apps.googleusercontent.com",
+  		"protectedUrl": "https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/b8c64953ec67f9443f7a79710b0b1aa59f3980f7590bc03b51262b22002c650c/path/action"
+  	}
+  }
 ```
 * Go to `angular` folder and run `ng serve`. 
 * In a browser, open `localhost:4200`.
