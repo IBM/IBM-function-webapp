@@ -7,7 +7,7 @@ This code pattern shows how to write Angular web applications which use IBM clou
 ## Flow
 ![architecture](https://media.github.ibm.com/user/1650/files/82134860-1c61-11e8-8f58-62763114310e)
 
-1. User opens Angular via web browser and presses 'login' button.
+1. User opens Angular via web browser and presses `login` button.
 2. Angular app opens Google OAuth web page where users authenticate and grant application access.
 3. Google web page redirects to OpenWhisk sequence 'oauth-login-and-redirect' with a 'code' parameter in the URL.
 4. The sequence is triggered. The first OpenWhisk function 'oauth-login' reads the 'code' and invokes a Google API endpoint to exchange the 'code' against a 'token'.
@@ -43,7 +43,7 @@ In a terminal, run:
 
 **2. Create protected API**
 
-* Run `wsk bluemix login` or `wsk bluemix login --sso` if you have sso enabled. This command will make you pick a openwisk namespace, like this:
+* Run `wsk bluemix login` or `wsk bluemix login --sso` if you have sso enabled. This command will make you pick a OpenWhisk namespace, like this:
 ```
   Select a namespace:
   1. andy.shi_dev
@@ -93,7 +93,7 @@ ok: created API /path/action get for action /andy.shi_dev/default/protected-acti
 https://service.us.apiconnect.ibmcloud.com/gws/apigateway/api/b8c64953ec67f9443f7a79710b0b1aa59f3980f7590bc03b51262b22002c650c/path/action
 
 ```
-The last url here is needed for the "pretectedUrl" field in step 6.
+The last url here is needed for the "protectedUrl" field in step 6.
 
 **3. Deploy OpenWhisk OAuth Actions**
 
@@ -114,10 +114,10 @@ The last url here is needed for the "pretectedUrl" field in step 6.
 * From the `Create credentials` menu bar pick `OAuth client ID`
 ![img2](screenshots/Oauth2.png)
 
-* Next you will see the warning message: "To create an OAuth client ID, you must first set a product name on the consent screen". Click "Configure content screen" button and finish the screen. That is pretty straightforward.
+* Next you will see the warning message: "To create an OAuth client ID, you must first set a product name on the consent screen". Click `Configure content screen` button and finish the screen. That is pretty straightforward.
 
-* Coming back to the "Create client id" tab, pick the first choice `Web Application`. You will see the tab expands.
-For "Authorized JavaScript origins", enter the domain of IBM cloud functions. For "Authorized redirect URIs", enter the "oauth-login-and-redirect" url(mind the namespace).
+* Coming back to the `Create client id` tab, pick the first choice `Web Application`. You will see the tab expands.
+For `Authorized JavaScript origins`, enter the domain of IBM cloud functions. For `Authorized redirect URIs`, enter the `oauth-login-and-redirect url (mind the namespace).
 ![img3](screenshots/Oauth3.png)
 
 * Click "Create" button and you will get the client id and secret in a popup. Save that information.
